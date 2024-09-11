@@ -46,7 +46,7 @@ services:
     networks:
       - 2eden_network
     volumes:
-      - ./api:/root/.project
+      - ./api/src:/root/.project
 
   bot:
     build: bot
@@ -59,7 +59,7 @@ services:
     networks:
       - 2eden_network
     volumes:
-      - ./bot:/root/.project
+      - ./bot/src:/root/.project
 
   tasks:
     build: tasks
@@ -71,8 +71,9 @@ services:
       - api
     networks:
       - 2eden_network
+    tty: true  #todo убрать
     volumes:
-      - ./tasks:/root/.project
+      - ./tasks/src:/root/.project
 
   nginx:
     image: nginx:alpine
