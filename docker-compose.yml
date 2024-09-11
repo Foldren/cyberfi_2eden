@@ -61,9 +61,9 @@ services:
     volumes:
       - ./bot:/root/.project
 
-  sheduler:
-    build: sheduler
-    container_name: sheduler
+  tasks:
+    build: tasks
+    container_name: tasks
     restart: unless-stopped
     environment:
       - TZ=Europe/Moscow
@@ -72,7 +72,7 @@ services:
     networks:
       - 2eden_network
     volumes:
-      - ./sheduler:/root/.project
+      - ./tasks:/root/.project
 
   nginx:
     image: nginx:alpine
