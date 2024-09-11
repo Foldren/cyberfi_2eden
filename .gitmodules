@@ -1,0 +1,9 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/Foldren/2eden_api
+[submodule "bot"]
+	path = bot
+	url = https://github.com/Foldren/2eden_bot
+[submodule "tasks"]
+	path = tasks
+	url = https://github.com/Foldren/2eden_tasks
