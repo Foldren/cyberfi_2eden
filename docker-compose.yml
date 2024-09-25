@@ -105,6 +105,7 @@ services:
       - 2eden_network
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./api/src/admin/statics:/home/admin_static
 
   #todo добавить frontend когда будет готов
 
