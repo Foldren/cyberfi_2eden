@@ -9,6 +9,6 @@ for i in 0 1 2 3 4; do
 	git init
 	eval "$(ssh-agent -s)"
 	ssh-add ${list_ssh_key_path[$i]}
-	git pull ${list_git_url[$i]} master
+	git pull --ff ${list_git_url[$i]} master
 done
 
